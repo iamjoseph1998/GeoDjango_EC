@@ -4,7 +4,7 @@ from .models import Location
 
 # Register your models here.
 class LocationAdmin(LeafletGeoAdmin):
-    list_display = ('name',)
+    list_display = ('name', 'coordinates',)
     search_fields = ('name',)
 
 admin.site.register(Location, LocationAdmin)
