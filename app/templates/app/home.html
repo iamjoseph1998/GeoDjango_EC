@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load leaflet_tags %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="container home">
+    {{map|safe}}
+</div>
+
+{% block js %}
+<link rel="javascript" href="{% static 'app/js/home.js' %}">
+{% endblock js %}
+{% endblock content %}
